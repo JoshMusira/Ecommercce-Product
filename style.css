@@ -1,0 +1,247 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    font-size: 16px;
+    background: #e6dfdf;
+    letter-spacing: 0.5px;
+}
+.logo{
+  font-size: 2rem;
+  font-weight: 400;
+  
+}
+.container-left{
+  display: flex;
+  gap: 20px;
+}
+.icon{
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.top-logo{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 100%;
+  }
+.navbar{
+    color: gray;
+    height: 100px;
+    background-color: #c4b8b8;
+    border-bottom: #262626;
+    
+    
+}
+.navbar .logo{
+    font-size: x-large;
+    font-weight: bold;
+    color: #000;
+}
+.navbar a{
+    color: rgb(226, 107, 226);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: orange;
+    transition: all .3s ease;
+  }
+  .navbar .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  ul{
+   list-style-type: none; 
+   align-items: center;
+  }
+  .navbar ul{
+    display: flex;
+  }
+ .navbar ul li {
+    margin-left: 20px;
+  }
+ .navbar .container .icon{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .main-image{
+  width: 25rem;
+  height: 20rem;
+  border-radius: 5px;
+  object-fit: cover;
+
+}
+.sub-images{
+  max-width: max-content;
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+  gap: 5px;
+
+
+}
+h3{
+  color: rgb(158, 86, 158);
+}
+.subject{
+  font-weight: bold;
+}
+.prices{
+  margin-top: 20px;
+}
+.price{
+  outline: none;
+  border: none;
+  background-color: #e6dfdf;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.previous-price{
+  /* margin-left: 4rem; */
+  float: right;
+  outline: none;
+  border: none;
+  text-decoration: line-through;
+  background-color: #e6dfdf;
+  color: rgb(112, 95, 95);
+}
+
+.btn{
+  display: block;
+}
+.quantity{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #ccbfbf;
+  /* gap: 40px; */
+  justify-content: space-between;
+  margin-top: 15px;
+  /* margin: 0 20px ; */
+}
+.items{
+  outline: none;
+  border: none;
+  margin: 0 15px;
+  cursor: pointer;
+  padding: 10px;
+  color: purple;
+  font-weight: bold;
+  background:  #ccbfbf;
+}
+.cart{
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  background: palevioletred;
+  border-radius: 5px;
+  transition: all .3s ease;
+  outline: none;
+  border: none;
+
+}
+.cart:hover{
+  background-color: antiquewhite;
+  color: purple;
+  border-color: orange;
+}
+.sub-image{
+  
+  width: 6rem;
+  height: 4rem;
+  border-radius: 5px;
+  object-fit: contain;
+  flex-wrap: wrap;
+}
+section{
+  display: flex;
+  margin: 60px 80px;
+  gap: 30px;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background:white;
+}
+@media(max-width:686px){
+  section{
+    display: block;
+    align-items: center;
+  }
+}
+@media(max-width:500px){
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .container-left{
+    position: fixed;
+    left: -100%;
+    /* top: 70px; */
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+  }
+  .nav-item{
+    margin: 16px 0;
+}
+.container-lef.active{
+    left: 0;
+}
+}
+@media(max-width: 535px){
+  .sub-images{
+    /* flex-direction: column; */
+   flex-wrap: wrap;
+  }
+  .main-image{
+   text-align: center;
+  }
+}
